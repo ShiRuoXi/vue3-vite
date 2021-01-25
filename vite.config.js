@@ -7,10 +7,17 @@ import {
  * @type {import('vite').UserConfig}
  */
 
-export default defineConfig({
+const path = require('path');
+ export default defineConfig({
     plugins: [vue()],
     server: {
         port: 7070,
+        // pluginOptions:{
+        //     'style-resources-loader': {
+        //         preProcessor: 'less',
+        //         patterns: [path.resolve(__dirname, './src/assets/css/home.less')],
+        //       }
+        // }
         // proxy: {
         //     // string shorthand
         //     '/home': 'http://localhost:4567/foo',
