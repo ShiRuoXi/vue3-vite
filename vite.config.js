@@ -10,6 +10,7 @@ import {
 const path = require('path');
  export default defineConfig({
     plugins: [vue()],
+    optimizeDeps:['axios'],
     server: {
         port: 7070,
         // pluginOptions:{
