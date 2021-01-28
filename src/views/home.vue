@@ -2,8 +2,11 @@
   <div>{{ msg }}</div>
 </template>
 <script>
-import { get, post } from "../api/request.js";
+// import { get, post } from "../api/request.js";
+import service from "../api/request";
+// import qs from "qs";
 import { ref, onMounted, onUpdated, onUnmounted } from "vue";
+import api from "../api/url";
 export default {
   setup() {
     let msg = ref("2020---");
@@ -23,10 +26,10 @@ export default {
     });
 
     const init = async () => {
-      await getFissionCourseList({ name: "2077", data: {} }).then((res) => {
-      });
-      await getGetrequs({ name: "7788", data: {} }).then((res) => {
-      });
+      await service.post(api.api.testurl, null, { params: { hybm: 1, token: 1 } })
+        .then((res) => {
+          console.log("res=>", res.data.msg);
+        });
     };
 
     return {
