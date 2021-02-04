@@ -6,11 +6,11 @@ const baseUrl = {
     base1: "https://2514.lianqianwang.com:98/api/contract/",
 }
 
-const api = {
+const url = {
     //拼接
     testurl: baseUrl.base + "deleteDoc"
 }
 
 export default {
-    api
+    url
 }

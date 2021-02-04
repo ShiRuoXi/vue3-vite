@@ -26,7 +26,7 @@ export default {
     });
 
     const init = async () => {
-      await service.post(api.api.testurl, null, { params: { hybm: 1, token: 1 } })
+      await service.post(api.url.testurl, null, { params: { hybm: 1, token: 1 } })
         .then((res) => {
           console.log("res=>", res.data.msg);
         });
